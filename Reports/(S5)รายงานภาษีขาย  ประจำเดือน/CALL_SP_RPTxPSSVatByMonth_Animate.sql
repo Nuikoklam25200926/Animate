@@ -5,7 +5,7 @@ EXEC SP_RPTxPSSVatByMonth_Animate
 '00001',	--@ptUsrSession Varchar(255),
 '2',	--@pnFilterType int, --1 BETWEEN 2 IN
 	----สาขา
-'''00002'',''00007''',	--@ptBchL Varchar(8000), --กรณี Condition IN
+'',	--@ptBchL Varchar(8000), --กรณี Condition IN
 '',	--@ptBchF Varchar(5),
 '',	--@ptBchT Varchar(5),
 	----Merchant
@@ -23,7 +23,9 @@ EXEC SP_RPTxPSSVatByMonth_Animate
 
 
 
-'08',	--@ptMonth Varchar(2),
+'09',	--@ptMonth Varchar(2),
 '2022',	--@ptYear Varchar(4),
 
 0	--@FNResult INT OUTPUT
+
+--TRUNCATE TABLE TRPTPSTaxMonthTmp_Animate
