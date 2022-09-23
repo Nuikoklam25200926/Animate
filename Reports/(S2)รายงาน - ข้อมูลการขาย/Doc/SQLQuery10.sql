@@ -1,0 +1,17 @@
+		SELECT FTBchCode,FTWahCode,FTPdtCode,
+		SUM(CASE FTStkType
+		WHEN '3' THEN ISNULL(FCStkQty,0)*-1
+		WHEN '4' THEN ISNULL(FCStkQty,0)
+		END) AS FCPdtStkQtySale,
+
+		SUM(CASE FTStkType
+		WHEN '1' THEN ISNULL(FCStkQty,0)*-1
+		WHEN '2' THEN ISNULL(FCStkQty,0)
+		WHEN '5' THEN ISNULL(FCStkQty,0)
+		END) AS FCPdtStkQtyIn
+
+		FROM TCNTPdtStkCrd
+		--WHERE FTStkType IN ('3','4')
+		GROUP BY FTBchCode,FTWahCode,FTPdtCode
+		--SELECT * FROM TCNTPdtStkCrdMe
+		--SELECT * FROM TCNTPdtStkCrdBch
