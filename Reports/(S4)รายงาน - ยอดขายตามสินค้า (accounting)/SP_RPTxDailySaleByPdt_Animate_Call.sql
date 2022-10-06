@@ -8,7 +8,7 @@ EXEC SP_RPTxDailySaleByPdt_Animate
 	2,--@pnFilterType int, --1 BETWEEN 2 IN
 
 	----สาขา
-	'''00001'',''00005''',--@ptBchL Varchar(8000), --กรณี Condition IN
+	'',--@ptBchL Varchar(8000), --กรณี Condition IN
 	'',--@ptBchF Varchar(5),
 	'',--@ptBchT Varchar(5),
 	----Merchant
@@ -24,8 +24,8 @@ EXEC SP_RPTxDailySaleByPdt_Animate
 	'',--@ptPosF Varchar(20),
 	'',--@ptPosT Varchar(20),
 
-	'',--@ptPdtCodeF Varchar(20),
-	'',--@ptPdtCodeT Varchar(20),
+	'00051',--@ptPdtCodeF Varchar(20),
+	'00051',--@ptPdtCodeT Varchar(20),
 	'',--@ptPdtChanF Varchar(30),
 	'',--@ptPdtChanT Varchar(30),
 	'',--@ptPdtTypeF Varchar(5),
